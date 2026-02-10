@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Light mode - Clean professional palette */
+    --background: 0 0% 98%;
+    --foreground: 210 40% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 15%;
+    --primary: 210 40% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 85%;
+    --secondary-foreground: 210 40% 15%;
+    --muted: 210 10% 75%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 180 100% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 15% 88%;
+    --input: 210 15% 92%;
+    --ring: 180 100% 48%;
+    --chart-1: 180 100% 48%;
+    --chart-2: 210 70% 48%;
+    --chart-3: 200 60% 52%;
+    --chart-4: 190 85% 50%;
+    --chart-5: 175 95% 52%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 40% 15%;
+    --sidebar-primary: 210 40% 15%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 180 100% 48%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 180 100% 48%;
+  }
+
+  .dark {
+    /* Dark mode - Deep navy with teal accents */
+    --background: 217 39% 11%;
+    --foreground: 210 30% 92%;
+    --card: 217 33% 15%;
+    --card-foreground: 210 30% 92%;
+    --popover: 217 33% 15%;
+    --popover-foreground: 210 30% 92%;
+    --primary: 210 30% 92%;
+    --primary-foreground: 217 39% 11%;
+    --secondary: 217 28% 22%;
+    --secondary-foreground: 210 30% 92%;
+    --muted: 217 25% 32%;
+    --muted-foreground: 210 15% 58%;
+    --accent: 180 96% 52%;
+    --accent-foreground: 217 39% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 28% 24%;
+    --input: 217 28% 20%;
+    --ring: 180 96% 52%;
+    --chart-1: 180 96% 52%;
+    --chart-2: 210 75% 52%;
+    --chart-3: 200 65% 55%;
+    --chart-4: 190 85% 52%;
+    --chart-5: 175 95% 55%;
+    --sidebar-background: 217 39% 11%;
+    --sidebar-foreground: 210 30% 92%;
+    --sidebar-primary: 180 96% 52%;
+    --sidebar-primary-foreground: 217 39% 11%;
+    --sidebar-accent: 217 28% 22%;
+    --sidebar-accent-foreground: 180 96% 52%;
+    --sidebar-border: 217 28% 24%;
+    --sidebar-ring: 180 96% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  code {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+  }
+
+  .animate-scale-up {
+    animation: scale-up 0.4s ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Stagger animations for multiple elements */
+  .animate-stagger > * {
+    animation: slide-up 0.5s ease-out forwards;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 100ms; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 200ms; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 300ms; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 400ms; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 500ms; }
+
+  /* Smooth transitions */
+  .transition-accent {
+    @apply transition-colors duration-300;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Gradient text */
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent) / 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-accent/20;
+  }
+
+  /* Divider styles */
+  .divider-accent {
+    background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.5), transparent);
+    height: 1px;
+  }
+}
