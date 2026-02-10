@@ -57,12 +57,12 @@ export default function About() {
                   <h2 className="mb-4 text-2xl font-semibold">Career Highlights</h2>
                   <div className="space-y-4">
                     <div className="rounded-lg border border-border/40 bg-card p-4">
-                      <p className="font-semibold">CoderKube - React/React Native Developer (Aug 2024 - Nov 2024)</p>
-                      <p className="text-sm text-muted-foreground">Built cross-platform applications including Heu (rewards platform) and Transectra (diamond marketplace)</p>
-                    </div>
-                    <div className="rounded-lg border border-border/40 bg-card p-4">
                       <p className="font-semibold">Dot3 Solutions - React Developer (Mar 2023 - Jul 2024)</p>
                       <p className="text-sm text-muted-foreground">Developed complex dashboards and platforms for fintech and marketing automation</p>
+                    </div>
+                    <div className="rounded-lg border border-border/40 bg-card p-4">
+                      <p className="font-semibold">CoderKube - React/React Native Developer (Aug 2024 - Nov 2024)</p>
+                      <p className="text-sm text-muted-foreground">Built cross-platform applications including Heu (rewards platform) and Transectra (diamond marketplace)</p>
                     </div>
                     <div className="rounded-lg border border-border/40 bg-card p-4">
                       <p className="font-semibold">HVG Technologies - Full-Stack Developer (Dec 2024 - Present)</p>
@@ -81,7 +81,7 @@ export default function About() {
                   <ul className="space-y-4 text-sm text-muted-foreground">
                     <li>
                       <p className="font-semibold text-foreground">Location</p>
-                      <p>Dubai, UAE</p>
+                      <p>Surat, Gujarat</p>
                     </li>
                     <li>
                       <p className="font-semibold text-foreground">Experience</p>

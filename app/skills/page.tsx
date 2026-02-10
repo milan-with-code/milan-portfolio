@@ -35,7 +35,7 @@ const skillCategories = [
   },
   {
     category: 'Backend & Databases',
-    skills: ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Database Design', 'API Architecture'],
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'Firebase'],
   },
   {
     category: 'Tools & Infrastructure',
@@ -49,10 +49,7 @@ const skillCategories = [
       'VS Code',
     ],
   },
-  {
-    category: 'Quality & Performance',
-    skills: ['Jest Testing', 'Web Performance', 'Accessibility (A11y)', 'Code Reviews', 'Debugging', 'Optimization'],
-  },
+
 ]
 
 export default function Skills() {
@@ -90,36 +87,6 @@ export default function Skills() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-16 rounded-lg border border-border/40 bg-card p-8">
-            <h2 className="mb-6 text-2xl font-semibold">Proficiency Breakdown</h2>
-            <div className="space-y-6">
-              {[
-                { skill: 'React Native (CLI & Expo)', level: 94 },
-                { skill: 'React.js & Next.js', level: 95 },
-                { skill: 'TypeScript', level: 92 },
-                { skill: 'Tailwind CSS & shadcn/ui', level: 93 },
-                { skill: 'State Management (Redux, RTK)', level: 88 },
-                { skill: 'Cross-Platform Architecture', level: 90 },
-                { skill: 'API Integration & GraphQL', level: 87 },
-                { skill: 'Web & App Performance', level: 89 },
-              ].map(({ skill, level }) => (
-                <div key={skill}>
-                  <div className="mb-2 flex justify-between">
-                    <p className="font-medium">{skill}</p>
-                    <p className="text-sm text-muted-foreground">{level}%</p>
-                  </div>
-                  <div className="h-2 rounded-full bg-secondary">
-                    <div
-                      className="h-full rounded-full bg-accent transition-all"
-                      style={{ width: `${level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Summary */}

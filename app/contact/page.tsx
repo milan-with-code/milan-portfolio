@@ -19,7 +19,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 import { useToast } from '@/hooks/use-toast'
-import { about } from '@/lib/portfolio-data'
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -34,8 +33,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@example.com',
-    href: 'mailto:hello@example.com',
+    value: 'detrujamilan0@gmail.com',
+    href: 'mailto:detrujamilan0@gmail.com',
   },
   {
     icon: Linkedin,
@@ -68,12 +67,12 @@ export default function Contact() {
     try {
       // Simulate form submission
       await new Promise((resolve) => setTimeout(resolve, 1000))
-      
+
       toast({
         title: 'Success!',
         description: 'Your message has been sent. I\'ll get back to you soon!',
       })
-      
+
       form.reset()
     } catch (error) {
       toast({
@@ -101,7 +100,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="rounded-lg border border-border/40 bg-card p-8">
               <h2 className="mb-6 text-2xl font-semibold">Send me a message</h2>
-              
+
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
