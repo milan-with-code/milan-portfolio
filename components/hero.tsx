@@ -39,7 +39,7 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <a href="/resume.pdf">
+            <a href="/resume.pdf" target='_blank'>
               <Button
                 size="lg"
                 variant="outline"
